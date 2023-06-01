@@ -8,7 +8,7 @@
   "contact": {
     "repo": "https://github.com/mattymatty/carpet-ReducedPackets"
   },
-  "license": "MIT",
+  "license": "LGPL-2.1",
   "environment": "server",
   "accessWidener": "carpet-ReducedPackets.accesswidener",
   "mixins": [
