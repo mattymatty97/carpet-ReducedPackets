@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "carpet-reduced_packets",
+  "version": "${version}",
+  "name": "carpet-ReducedPackets",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/mattymatty/carpet-ReducedPackets"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "accessWidener": "carpet-ReducedPackets.accesswidener",
+  "mixins": [
+    "carpet-ReducedPackets.mixins.json"
+  ],
+  "entrypoints": {
+    "server": ["com.mattymatty.carpet_reducedpackets.ReducedPackets"]
+  },
+  "depends": {
+    "minecraft": "${mc_version}",
+    "carpet": "1.4.57+"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.mattymatty.carpet_reducedpackets.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "server": [
+    "ClientConnectionMixin",
+    "ServerLoginNetworkHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+  ]
+}
