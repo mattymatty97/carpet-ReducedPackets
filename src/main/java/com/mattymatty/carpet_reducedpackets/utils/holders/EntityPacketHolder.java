@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
 
@@ -109,7 +110,7 @@ public class EntityPacketHolder {
         }
 
         if (packet instanceof EntityS2CPacket entityS2CPacket) {
-            /*EntityS2CPacket relative_packet = holder.relativePosition;
+            EntityS2CPacket relative_packet = holder.relativePosition;
             if (relative_packet == null){
                 holder.relativePosition = entityS2CPacket;
             }else{
@@ -148,8 +149,8 @@ public class EntityPacketHolder {
                         holder.relativePosition = new EntityS2CPacket.RotateAndMoveRelative(entityId, (short)((int)EntityS2CPacket.encodePacketCoordinate(vect3.x)), (short)((int)EntityS2CPacket.encodePacketCoordinate(vect3.y)), (short)((int)EntityS2CPacket.encodePacketCoordinate(vect3.z)), rotateAndMove2.getYaw(), rotateAndMove2.getPitch(), rotateAndMove2.isOnGround());
                     }
                 }
-            }*/
-            holder.absolutePosition = new EntityPositionS2CPacket(entity);
+            }
+            //holder.absolutePosition = new EntityPositionS2CPacket(entity);
             return true;
         }
 
@@ -259,13 +260,11 @@ public class EntityPacketHolder {
                 .map(EntityPacketHolder::getAbsolutePosition)
                 .filter(Objects::nonNull)
                 .forEach(sender);
-        /* removed
         //update all relative positions
         alive_entities.stream().filter(holder->holder.relativePosition!=null)
                 .map(EntityPacketHolder::getRelativePosition)
                 .filter(Objects::nonNull)
                 .forEach(sender);
-         */
         //update all head positions
         alive_entities.stream()
                 .map(EntityPacketHolder::getHead_yaw)

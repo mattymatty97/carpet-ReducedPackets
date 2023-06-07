@@ -34,6 +34,8 @@ dependencies {
     provided "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:latest.release"
     provided group: 'it.unimi.dsi', name: 'fastutil', version: 'latest.release'
     provided group: 'org.apache.commons', name: 'commons-collections4', version: 'latest.release'
+    provided group: 'net.objecthunter', name: 'exp4j', version: '0.4.8'
+    provided group: 'com.google.guava', name: 'guava', version: 'latest.release'
 
 }
 
@@ -48,6 +50,9 @@ processResources {
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
+        expand placeholders
+    }
+    filesMatching("placeholders.properties") {
         expand placeholders
     }
 }
